@@ -2,8 +2,8 @@
 <meta charset="utf-8">
 <html>
 <head>
-	<title>#webmaptime</title>
-	<link target="_blank" href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<title>Web Maps 101</title>
+	<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 	<style>
 
 		/*
@@ -28,8 +28,8 @@
 
 		html, body{
 			margin: 0;
-			font: 20px/24px "PT Sans", sans-serif;
-			background-color: #d1c9b8;
+			font: 20px/24px 'Arimo', sans-serif;
+			background-color: #000;
 		}
 		.slide, .slide div{
 			position: absolute;
@@ -41,7 +41,7 @@
 			background-repeat: no-repeat;
 		}
 		.slide{
-			background-color: #d1c9b8;
+			background-color: #000;
 			
 		}
 		.slide.image_bottom{
@@ -50,6 +50,7 @@
 		.slide p{
 			position: absolute;
 			font-size: 64px;
+			color: #fff;
 			line-height: 72px;
 			font-weight: bold;
 			text-align: center;
@@ -60,6 +61,7 @@
 			top: 50px;
 			left: 300px;
 			position: absolute;
+			color: #fff;
 			font-size: 64px;
 			line-height: 72px;
 			font-weight: bold;
@@ -89,7 +91,7 @@
 		}
 
 		a{
-			color: #669;
+			color: #34d0e7;
 			text-decoration: none;
 		}
 
@@ -105,6 +107,11 @@
 			background-color: rgba(255,255,255,.75);
 		}
 
+		em{
+  			font-style: normal;
+  			color: #F3EB37;
+		}
+
 		.code{
 			font-family: 'Courier New';
 		}
@@ -113,14 +120,14 @@
 <body>
 
 <div class="slide">
-	<p class="title">#webmaptime</p>
-	<a class="citation" target="_blank" href="http://github.com/maptimeboston">Mike Foster and Andy Woodruff for Maptime Boston</a>
+	<p class="title">Web Maps 101</p>
+	<a class="citation" target="_blank" href="https://github.com/maptimemilehigh">Nell Conti, Nate Irwin, and Mamata Akella</a>
 </div>
 
 <div class="slide image_full">
 	<img src="images/anatomy.jpg"/>
-	<p>FIRST: Thanks to Alan McConchie, Beth Schechter, and the Maptime team for much of this material!</p>
-	<a class="citation" target="_blank" href="https://github.com/maptime/anatomy-of-a-web-map">Anatomy of a Web Map</a>
+	<p>FIRST: Thanks to Maptime Boston and the rest of the larger Maptime community for much of this material!</p>
+	<a class="citation" target="_blank" href="https://github.com/maptime/anatomy-of-a-web-map">#webmaptime</a>
 </div>
 
 <div class="slide">
@@ -133,7 +140,7 @@
 </div>
 
 <div class="slide">
-	<p>"Web map" often implies a map that is not simply <em>on</em> the web, but rather one that is <em>powered by</em> the web.</p>
+	<p><em>Web map</em> often implies a map that is not simply <em>on</em> the web, but rather one that is <em>powered by</em> the web.</p>
 </div>
 
 <div class="slide">
@@ -150,13 +157,17 @@
 </div>
 
 <div class="slide">
-	<iframe width="100%" height="95%" frameborder="0" src="http://bostonography.com/bus"></iframe>
-	<a class="citation" target="_blank" href="http://bostonography.com/bus">bostonography</a>
+	<iframe width="100%" height="95%" frameborder="0" src="http://www.nytimes.com/interactive/dining/new-york-health-department-restaurant-ratings-map.html"></iframe>
+	<a class="citation" target="_blank" href="http://www.nytimes.com/interactive/dining/new-york-health-department-restaurant-ratings-map.html">New York Times</a>
+</div>
+
+<div class="slide">
+	<p>Where did this all start?</p>
 </div>
 
 <div class="slide">
 	<img src="images/geocoding_mapquest.gif"/>
-	<p>MapQuest ruled the early days of web maps</p>
+	<p>MapQuest ruled the early days of web maps beginning in 1996</p>
 </div>
 
 <div class="slide">
@@ -164,8 +175,10 @@
 	<p>Enter Google, 2005</p>
 </div>
 
+
+
 <div class="slide image_bottom">
-	<p>Google Maps pioneered what is now sometimes called a "slippy map"</p>
+	<p>Google Maps pioneered what is now sometimes called a <em>slippy map</em></p>
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94411.73947848764!2d-71.05715705!3d42.31337345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3652d0d3d311b%3A0x787cbf240162e8a0!2sBoston%2C+MA!5e0!3m2!1sen!2sus!4v1403529313730" width="1024" height="500" frameborder="0" style="border:0; position: absolute; bottom: 0"></iframe>
 </div>
 
@@ -176,18 +189,22 @@
 
 <div class="slide image_full">
 	<img src="images/mapquest_tiles2.png"/>
-	<p>A "slippy map" is usually made of tiles.</p>
+	<p>A slippy map is usually made of <em>tiles</em>.</p>
+</div>
+
+<div class="slide image_bottom">
+	<p><em>Tiles</em><br>Pre-rendered map images that fit seamlessly together in geographic space.</br></p>
 </div>
 
 <div class="slide image_full">
 	<img src="images/tile_loading.gif"/>
-	<p>Tiling chops the map into pieces to quickly load only the part of the map in view.</p>
+	<p>Tiling chops the map into pieces to <em>quickly load</em> only the part of the map in view.</p>
 	<a class="citation" target="_blank" href="http://maps.stamen.com/">maps.stamen.com</a>
 </div>
 
 <div class="slide image_bottom">
 	<img src="images/tile_pixels.png"/>
-	<p>Tiles are usually pre-rendered raster images, although vector tiles are on the rise.</p>
+	<p>Tiles are usually <em>pre-rendered raster images</em>, although <em>vector tiles</em> are on the rise.</p>
 </div>
 
 <div class="slide image_full">
@@ -198,14 +215,7 @@
 
 <div class="slide">
 	<img src="images/tiles.gif"/>
-	<p>256 x 256 pixels.<br/>
-		Standardized locations.<br/>
-		20ish zoom levels.</p>
-</div>
-
-<div class="slide">
-	<p>zoom, x, y<br/><br/>
-		e.g. .../14/4955/6059.png</p>
+	<p>Map tiles are 256x256 pixels and organized based on coordinates (x,y) and zoom levels (z).</p>
 </div>
 
 <div class="slide">
@@ -217,32 +227,34 @@
 </div>
 
 <div class="slide">
+	<p><em>Zoom Level</em><br>A predefined scale at which a map is rendered. Ranges from 0 (entire world) to 21 (individual building level).</br></p>
+</div>
+
+<div class="slide">
+	<img src="images/zoom-slider.png"/>
+</div>
+
+<div class="slide">
 	<p>Number of tiles at zoom level <em>z</em>:<br/>
 		2<sup>z</sup> x 2<sup>z</sup> = 4<sup>z</sup></p>
 </div>
 
 <div class="slide">
-	<p>At the resolution of my computer, a world map at zoom 21 would be nearly 78 miles square!</p>
-	<a class="citation" target="_blank" href="http://msdn.microsoft.com/en-us/library/bb259689.aspx">Bing Maps Tile System</a>
+	<img src="images/tiles.png"/>
 </div>
 
 <div class="slide">
-	<iframe width="100%" height="95%" frameborder="0" src="tiles.html"></iframe>
+	<p>Map tiles are just images on the web, so you can link to them individually.</p>
+</div>
+
+<div class="slide">
+	<img src="images/tile-url.png"/>
 </div>
 
 <div class="slide image_full">
 	<img src="images/mercator1569.jpg"/>
 	<p>Tiled web maps use the Mercator projection.</p>
 	<a class="citation" target="_blank" href="http://en.wikipedia.org/wiki/Mercator_projection#mediaviewer/File:Mercator_1569.png">Wikipedia</a>
-</div>
-
-<div class="slide">
-	<p>The math is simple!*<br/><br/>
-		x = λ<br/>
-                y = ln(tan φ + sec φ)<br/>
-		where λ is longitude, φ is latitude
-	</p>
-	<a class="citation" href="http://www.hydrometronics.com/downloads/Web%20Mercator%20-%20Non-Conformal,%20Non-Mercator%20(notes).pdf" target="_blank">*kind of. 'Web Mercator' is more complicated, but you can still do many things with the basic formula.</a>
 </div>
 
 <div class="slide image_bottom">
@@ -255,19 +267,9 @@
 	<p>At a local scale, this means that shape and direction are preserved.</p>
 </div>
 
-<div class="slide">
-	<img src="images/squish.jpg"/>
-	<p>And that's generally a good thing.</p>
-	<a class="citation" target="_blank" href="http://idvux.wordpress.com/2007/06/06/mercator-vs-well-not-mercator-platte-carre/">John Nelson, Plate carrée squish effect</a>
-</div>
-
 <div class="slide image_full">
 	<img src="images/world.jpg"/>
 	<p>A Mercator map of the world is not a map of the world.</p>
-</div>
-
-<div class="slide">
-	<p>ln(tan 90&#176; + sec 90&#176;) = Infinity</p>
 </div>
 
 <div class="slide">
@@ -279,37 +281,7 @@
 </div>
 
 <div class="slide">
-	<img src="images/southpole.jpg"/>
-</div>
-
-<div class="slide image_full">
-	<img src="images/suspicious.jpg"/>
-	<p>Be suspicious of web map comparisons "at the same scale."</p>
-</div>
-
-<div class="slide">
-	<iframe width="100%" height="95%" frameborder="0" src="https://gmaps-samples.googlecode.com/svn/trunk/poly/puzzledrag.html"></iframe>
-</div>
-
-<div class="slide">
-	<p>ZOOM LEVEL &#8800; SCALE</p>
-</div>
-
-<div class="slide">
-	<img src="images/quito.jpg"/>
-</div>
-
-<div class="slide">
-	<img src="images/oslo.jpg"/>
-</div>
-
-<div class="slide">
-	<img src="images/z16.jpg"/>
-</div>
-
-<div class="slide">
-	<img src="images/mercator_choro.jpg"/>
-	<p>So avoid areal representations in web maps at small scale.</p>
+	<p>That covers it, right?<br>not yet.</br></p>
 </div>
 
 <div class="slide image_full">
@@ -318,22 +290,29 @@
 </div>
 
 <div class="slide">
-	<p>Dynamic, interactive <em>feature layers</em> are the important other half of many web maps.</p>
+	<p>Dynamic and interactive <em>feature layers</em> are the important other half of many web maps.</p>
 </div>
 
 <div class="slide">
 	<img src="images/osm_tile.png"/>
-	<p>Tiles, typically: raster, non-interactive<a href="https://www.mapbox.com/blog/how-interactivity-works-utfgrid/" target="_blank">*</a>, used as a base layer</p>
+	<p><em>Tiles</em> are typically raster, non-interactive<a href="https://www.mapbox.com/blog/how-interactivity-works-utfgrid/" target="_blank">*</a>, used as a <em>base layer</em></p>
 </div>
 
 <div class="slide">
-	<p>Feature layers, typically: interactive, vector, represent the map's salient data</p>
+	<p><em>Base Layer</em><br>A map that provides geographic context to help support a wide variety of feature layers.</br><br>(aka <em>basemap</em> or <em>base map</em>)</br>
+</div>
+
+<div class="slide">
+	<p><em>Feature layers</em> are typically interactive, vector, represent the map's salient data</p>
 	<iframe src="http://leafletjs.com/examples/quick-start-example.html" scrolling="no" frameborder="0" width="600" height="400" style="position:absolute;bottom:100px;left:212px"></iframe>
 </div>
 
 <div class="slide">
-	<p><a href="http://en.wikipedia.org/wiki/GeoJSON" target="_blank">GeoJSON</a> is a geographic data format that plays well with web maps for feature layers</p>
-	<img src="images/geojson.png"/>
+	<p><em>Feature Layer</em><br>Themes of information overlaid on a base layer that help tell a story.</br><br>(aka <em>overlay</em>)</br>
+</div>
+
+<div class="slide">
+	<img src="images/basemap-overlay.png"/>
 </div>
 
 <div class="slide image_full">
@@ -350,25 +329,24 @@
 	<img src="http://awesomegifs.com/wp-content/uploads/Ron-Swanson-is-excited.gif"/></p>
 </div>
 
+<div class="slide">
+	<p>Web maps <em>are still maps</em> so the overarching requirement is that they are created with the purpose and user in mind.</p>
+</div>
+
 <div class="slide image_full">
 	<p>All good maps tell stories.<br/>What is the story you are trying to tell?<br/>
 	<img src="images/cartographers-do.png"/></p>
 	<a class="citation" target="_blank" href="http://github.com/maptimeboston">Mike Foster and Andy Woodruff for Maptime Boston</a>
 </div>
 
-<div class="slide">
-	<p>Cartographers do this.<br/>
+<div class="slide image_full">
+	<p><em>Cartographers do this.</em><br/>
 	<img src="images/john-snow.jpg"/></p>
 </div>
 
 <div class="slide image_full">
 	<p>Who is your audience?<br/><br/>
 	<img src="http://cbsfwbam.files.wordpress.com/2013/02/movie-audience-3d-glasses.jpg?w=620&h=349&crop=1"/></p>
-</div>
-
-<div class="slide image_bottom">
-	<p>What is your goal?<br/>
-	<img src="images/cart-cube.png"/></p>
 </div>
 
 <div class="slide image_full">
@@ -378,22 +356,11 @@
 </div>
 
 <div class="slide">
-	<p>
-	Data Matters<br/><em>Spend the time upfront working on your data!</em><br/>
-	<img src="images/data-types.png"/></p>
-</div>
-
-<div class="slide image_bottom">
-	<p><ul>
-		<li>Standardized</li>
-		<li>Normalized</li>
-		<li>Organized</li>
-	</ul>
-	<img src="images/data-types.png"/></p>
+	<p>Data Considerations</p>
 </div>
 
 <div class="slide">
-	<p>Data Considerations</p>
+	<p><em>Important</em><br>Spend the time upfront working on your data!</br></p>
 </div>
 
 <div class="slide image_full">
@@ -493,11 +460,7 @@
 </div>
 
 <div class="slide">
-	<p>What can I use to get started?</p>
-</div>
-
-<div class="slide">
-	<p>Data Presentation</p>
+	<p>What tools can I use to get started?</p>
 </div>
 
 <div class="slide image_bottom">
@@ -505,71 +468,16 @@
 		<a target="_blank" href="https://cartodb.com/">CartoDB</a><br/>
 		<a target="_blank" href="https://www.mapbox.com/mapbox.js/api/v1.6.4/">Mapbox</a><br/>
 		<a target="_blank" href="http://leafletjs.com/">Leaflet</a><br/>
-		<a target="_blank" href="https://www.mapbox.com/tilemill/">Tilemill</a><br/>
+		<a target="_blank" href="https://www.mapbox.com/tilemill/">TileMill</a><br/>
+		<a target="_blank" href="https://www.mapbox.com/mapbox-studio/">Mapbox Studio</a><br/>
 		<a target="_blank" href="http://openlayers.org/">OpenLayers</a><br/>
 		<a target="_blank" href="http://developer.mapquest.com/web/products/open/sdk">Mapquest Javascript APIS</a><br/>
 		<a target="_blank" href="http://developer.mapquest.com/web/products/open/sdk">Google Javascript APIS</a><br/>
 	</p>
 </div>
 
-<div class="slide image_bottom">
-	<p><a target="_blank" href="https://cartodb.com/">CartoDB</a><br/></p>
-	<iframe width='1024' height='600' frameborder='0' style="border:0; position: absolute; bottom: 0" src='https://mjfoster83.cartodb.com/viz/fc520b16-fbf9-11e3-ac1a-0e230854a1cb/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=&sw_lat=40.01499435375046&sw_lon=-75.4541015625&ne_lat=44.000717834282774&ne_lon=-65.841064453125' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-</div>
-
 <div class="slide">
-	<p>
-		Data Management/Manipulation
-	</p>
-</div>
-
-<div class="slide image_full">
-	<p>Free and Open Source GIS Software<br/><br/><a target="_blank" href="http://www.qgis.com/">QGIS</a><br/>
-	<img src="http://upload.wikimedia.org/wikipedia/commons/7/71/QGis_Logo.png"/></p>
-</div>
-
-<div class="slide image_bottom">
-	<p>Data Options<br/>
-		<a target="_blank" href="https://cartodb.com/">CartoDB</a><br/>
-		<a target="_blank" href="http://geojson.org/">GeoJSON</a><br/>
-		<a target="_blank" href="https://github.com/mbostock/topojson">TopoJSON</a><br/>
-		<a target="_blank" href="https://developers.google.com/kml/">KML</a><br/>
-		<a target="_blank" href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV</a><br/>
-		etc. etc. etc.</p>
-</div>
-
-<div class="slide">
-	<p>Basemaps</p>
-</div>
-
-<div class="slide">
-	<p>Design in <a target="_blank" href="https://www.mapbox.com/tilemill/">TileMill</a>
-		<br/><br/>Host on <a target="_blank" href="http://mapbox.com">Mapbox</a> or on your own:
-		<br/><br/><a target="_blank" href="https://github.com/klokantech/tileserver-php/">TileServer.php</a>, <a target="_blank" href="http://tilestache.org/">TileStache</a>, <a target="_blank" href="http://tilecache.org/">TileCache</a>, <a target="_blank" href="https://github.com/mapbox/tilestream">TileStream</a>,<br/><a target="_blank" href="https://github.com/chelm/mbtiles-server">mbtiles-server</a>, <a target="_blank" href="http://wiki.openstreetmap.org/wiki/Mod_tile%22">mod_tile</a></p>
-</div>
-
-<div class="slide">
-	<p>Or just use nice existing tiles!<br/><br/>
-		<a target="_blank" href="http://wiki.openstreetmap.org/wiki/Tiles">OpenStreetMap</a>, <a target="_blank" href="http://maps.stamen.com/">Stamen</a>,<br/><a target="_blank" href="https://www.mapbox.com/tour/#maps">Mapbox</a>, <a target="_blank" href="http://developer.mapquest.com/web/products/open/map">MapQuest</a></p>
-</div>
-
-<div class="slide">
-	<p>What is Git, Github,<br/>and GeoJSON?<br/>
-	<a target="_blank" href="http://giscollective.org/github-bringing-geojson-to-life-since-2013/">Learn Git, Github, and GeoJSON</a><br/></p>
-	<a class="citation" target="_blank" href="http://giscollective.org/github-bringing-geojson-to-life-since-2013/">GIS Collective - Lyzi Diamond</a>
-</div>
-
-<div class="slide">
-	<p>Find Examples!<br/>Open them, paste them, change things!<br/>
-		<a target="_blank" href="http://giscollective.org/tutorials/">GIS Collective Tutorials</a><br/>	
-		<a target="_blank" href="http://leafletjs.com/examples.html">Leaflet Tutorials</a><br/>
-		<a target="_blank" href="https://www.mapbox.com/mapbox.js/example/v1.0.0/">MapboxJS Examples</a><br/>
-		<a target="_blank" href="http://docs.openlayers.org/library/introduction.html">OpenLayers Tutorials</a><br/>
-	</p>
-</div>
-
-<div class="slide">
-	<p>I need data<br/>Where do I get data?</p>
+	<p>Where do I get data?</p>
 </div>
 
 <div class="slide">
@@ -589,23 +497,67 @@
 </div>
 
 <div class="slide">
-	<p>Exploration Session<br/>
+	<p>How can I manipulate and manage my data?</p>
+</div>
+
+<div class="slide image_bottom">
+	<p><a target="_blank" href="https://cartodb.com/">CartoDB</a><br/></p>
+	<iframe width='1024' height='600' frameborder='0' style="border:0; position: absolute; bottom: 0" src='https://mjfoster83.cartodb.com/viz/fc520b16-fbf9-11e3-ac1a-0e230854a1cb/embed_map?title=true&description=true&search=false&shareable=true&cartodb_logo=true&layer_selector=false&legends=true&scrollwheel=true&fullscreen=true&sublayer_options=1&sql=&sw_lat=40.01499435375046&sw_lon=-75.4541015625&ne_lat=44.000717834282774&ne_lon=-65.841064453125' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+</div>
+
+<div class="slide image_full">
+	<p>Free and Open Source GIS Software<br/><br/><a target="_blank" href="http://www.qgis.com/">QGIS</a><br/>
+	<img src="http://upload.wikimedia.org/wikipedia/commons/7/71/QGis_Logo.png"/></p>
 </div>
 
 <div class="slide">
-	<p>Boston rodent incidents. Ew.<br/>
-	<br/>
-	<a target="_blank" href="http://geojson.io/#map=12/42.3324/-71.0386">geojson.io</a><br/>
-	<a target="_blank" href="https://data.cityofboston.gov/City-Services/Rodent-Activity-open-cases-9-4-13/ynt4-n6g9">Data Boston</a><br/>
-	<em>Download the CSV. Add the file to geojson.io!</em></p>
+	<p>How do I make my data an overlay?</p>
+</div>
+
+<div class="slide image_bottom">
+	<p>Data Options<br/>
+		<a target="_blank" href="https://cartodb.com/">CartoDB</a><br/>
+		<a target="_blank" href="http://geojson.org/">GeoJSON</a><br/>
+		<a target="_blank" href="https://github.com/mbostock/topojson">TopoJSON</a><br/>
+		<a target="_blank" href="https://developers.google.com/kml/">KML</a><br/>
+		<a target="_blank" href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV</a><br/>
+		<a target="_blank" href="https://www.mapbox.com/developers/vector-tiles/">Vector Tiles</a><br/>
+		etc. etc. etc.</p>
 </div>
 
 <div class="slide">
-	<p>Thats not all folks!<br/>Welcome to the world of Web Maps!<br/>
-		<a target="_blank" href="http://wiki.openstreetmap.org/wiki/Vector_tiles">Vector Tiles</a><br/>
-		<a target="_blank" href="https://github.com/mapbox/utfgrid-spec">UTF Grid</a><br/>	
-		<a target="_blank" href="http://d3js.org/">D3</a><br/>
+	<p>What about the basemap?</p>
+</div>
+
+<div class="slide">
+	<p>Design in <a target="_blank" href="https://www.mapbox.com/tilemill/">TileMill or Mapbox Studio</a>
+		<br/><br/>Host on <a target="_blank" href="http://mapbox.com">Mapbox</a> or on your own:
+		<br/><br/><a target="_blank" href="https://github.com/klokantech/tileserver-php/">TileServer.php</a>, <a target="_blank" href="http://tilestache.org/">TileStache</a>, <a target="_blank" href="http://tilecache.org/">TileCache</a>, <a target="_blank" href="https://github.com/mapbox/tilestream">TileStream</a>,<br/><a target="_blank" href="https://github.com/chelm/mbtiles-server">mbtiles-server</a>, <a target="_blank" href="http://wiki.openstreetmap.org/wiki/Mod_tile%22">mod_tile</a></p>
+</div>
+
+<div class="slide">
+	<p>Or just use nice existing tiles!<br/><br/>
+		<a target="_blank" href="http://wiki.openstreetmap.org/wiki/Tiles">OpenStreetMap</a>, <a target="_blank" href="http://maps.stamen.com/">Stamen</a>,<br/><a target="_blank" href="https://www.mapbox.com/tour/#maps">Mapbox</a>, <a target="_blank" href="http://developer.mapquest.com/web/products/open/map">MapQuest</a></p>
+</div>
+
+<div class="slide">
+	<p>What is Git, Github,<br/>and GeoJSON?<br/>
+	<a target="_blank" href="http://giscollective.org/github-bringing-geojson-to-life-since-2013/">Learn Git, Github, and GeoJSON</a><br/></p>
+	<a class="citation" target="_blank" href="http://giscollective.org/github-bringing-geojson-to-life-since-2013/">GIS Collective - Lyzi Diamond</a>
+</div>
+
+
+<div class="slide">
+	<p>Find Examples!<br/>Open them, paste them, change things!<br/>
+		<a target="_blank" href="http://giscollective.org/tutorials/">GIS Collective Tutorials</a><br/>	
+		<a target="_blank" href="http://leafletjs.com/examples.html">Leaflet Tutorials</a><br/>
+		<a target="_blank" href="https://www.mapbox.com/mapbox.js/example/v1.0.0/">MapboxJS Examples</a><br/>
+		<a target="_blank" href="http://docs.openlayers.org/library/introduction.html">OpenLayers Tutorials</a><br/>
 	</p>
+</div>
+
+<div class="slide">
+	<p><em>Let's build a simple web map!</em></p>
 </div>
 
 <script>
